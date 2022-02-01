@@ -2,5 +2,7 @@
 target/
 .lib/
 .bsp/
-project/
+project/*
+!project/build.properties
+!project/plugins.sbt
 
