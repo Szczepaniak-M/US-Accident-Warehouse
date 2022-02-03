@@ -11,7 +11,7 @@ import java.sql.{Date, Timestamp}
 import java.time.{LocalDate, LocalDateTime}
 
 
-object FactLoader {
+object AccidentLoader {
 
   val temperatureUnknownId = 5
   val visibilityUnknownId = 5
