@@ -1,0 +1,9 @@
+{
+  "BQ_DATASET": "ExampleBigQueryDatasetName",
+  "BUCKET_NAME": "example-bucket-name",
+  "CLUSTER_NAME": "example-cluster-name",
+  "INPUT_PATH": "gs://example-bucket-name/us-accidents",
+  "PROJECT_ID": "example-project-id",
+  "REGION": "europe-central2",
+  "TEMPORARY_BUCKET": "example-temporary-bucket"
+}

@@ -8,6 +8,9 @@ object TemperatureLoader {
                                           .appName("pl.michalsz.spark.TemperatureLoader")
                                           .getOrCreate()
 
+    val bigQueryTemporaryGcsBucket = args(0)
+    val bigQueryDataset = args(1)
+
     val temperatureValues = Seq(
       (0, Some(-128), Some(14), "Frosty"),
       (1, Some(14), Some(32), "Cold"),
@@ -20,7 +23,9 @@ object TemperatureLoader {
     spark.createDataFrame(temperatureValues)
          .toDF("TemperatureId", "MinimumTemperature", "MaximumTemperature", "Description")
          .write
-         .format("delta")
-         .insertInto("Temperature")
+         .format("bigquery")
+         .option("temporaryGcsBucket", bigQueryTemporaryGcsBucket)
+         .mode("append")
+         .save(s"$bigQueryDataset.Temperature")
   }
 }
