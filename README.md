@@ -50,7 +50,7 @@ Each class in main catalog is independent program with its `main` method.
 - WeatherConditionLoader - fill the WeatherCondition table with data
 - AccidentLoader - fill the Accident table with data
 
-### Airflow (Composer)
+## Airflow (Composer)
 To run Airflow DAG for this project, you have to do the following steps:
 1. Create bucket for storing temporary file by Spark during working with Big Query
 2. Create bucket for storing required files:
